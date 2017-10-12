@@ -20,9 +20,46 @@
 		.btn{
 			background: #c00;
 		}
+
+		.callout{
+			position:relative;
+			background: yellow;
+			margin-top:40px;
+		}
+		.callout:before{
+			content:"";
+			position:absolute;
+			top:-0.4em;
+			left:1em;
+			padding:0.35em;
+			background:inherit;
+			border:inherit;
+			border-right:0;
+			border-bottom:0;
+			border-top:0;
+			border-left:5px;
+			transform:rotate(45deg);
+		}
 	</style>
 </head>
 <body>
 <div class="btn">Yes!</div>
+<div class="field" style="padding-top:20px;">
+    <div class="imguploadcontrol"><img class="imgselect" src="http://hz-mp.oss-cn-hangzhou.aliyuncs.com/' + userinfo.PhotoFile + '" />
+        <div class="unselectblock" style="display:none;">
+            <h2 class="unselectblocktitle">请选择头像</h2><i class="upload icon unselecticon"></i></div>
+        <input type="file" class="selectfile" name="imgselect" accept="image/*" />
+        <input type="hidden" name="photourl" />
+    </div>
+</div>
+<div class="field" style="padding-top:20px;">
+    <div class="imguploadcontrol"><img class="imgselect" src="/images/ce21cbdd9b894e6af794813eb3fdaf60" />
+        <div class="unselectblock">
+            <h2 class="unselectblocktitle">请选择头像</h2><i class="upload icon unselecticon"></i></div>
+        <input type="file" class="selectfile" name="imgselect" accept="image/*" />
+        <input type="hidden" name="photourl" />
+    </div>
+</div>
+<div class="tip callout">测试tip数据</div>
 </body>
 </html>

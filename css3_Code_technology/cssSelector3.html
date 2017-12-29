@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>动态伪类选择器:target</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    	.accordionMenu{
+            background: #fff;
+            color:#424242;
+            font:12px Arial ,Verdana ,sans-serif;
+            margin:0 auto;
+            padding:10px;
+            width: 500px;
+        }
+
+        .accordionMenu h2{
+            margin:5px 0;
+            padding:0;
+            position: relative;
+        }
+        /*制作向下的三角*/
+        .accordionMenu h2:before{
+            border:5px solid #fff;
+            
+            border-color:#fff transparent transparent transparent;  
+            content:"";
+            height: 0;
+            position: absolute;
+            right: 10px;
+            top:15px;
+            width: 0;
+        }
+        .accordionMenu :target p {
+            height: 100px;
+            overflow: auto;
+        }
+        .accordionMenu h2 a{
+            background: #8f8f8f;
+            border-radius:5px;
+            color:#424242;
+            display:block;
+            font-size:13px;
+            font-weight:normal;
+            margin:0;
+            padding:10px 10px ;
+            text-decoration: none;
+        }
+
+        .accordionMenu p{
+            margin:0 ;
+            height: 0;
+            overflow: hidden;
+            padding :0 10px;
+            transition: height 0.5s ease-in;
+
+        }
+        /*overflow :auto 引入时 会 显示一小段 阴影*/
+        .accordionMenu :target p {
+            height: 100px;
+            overflow:auto;
+        }
+
+        .accordionMenu :target h2:before{
+            border-color: transparent transparent transparent #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordionMenu">
+        <div class="menuSection" id="brand">
+            <h2><a href="#brand">brand</a></h2>
+            <p>
+                Lorem ipsum dolor... 
+            </p>
+        </div>
+        <div class="menuSection" id="promotion">
+            <h2><a href="#promotion">Promotion</a></h2>
+            <p>
+                Lorem dolor 2 
+            </p>
+        </div>
+        <div class="menuSection" id="event">
+            <h2><a href="#event">Event</a></h2>
+            <p>
+                Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3Lorem dolor 3
+            </p>
+        </div>
+    </div> 
+</body>
+</html>

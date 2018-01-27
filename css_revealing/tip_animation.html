@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 提示框 -- 运动效果</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input:not(:focus) + .callout{
+			transform:scale(0);
+		}
+		.callout{
+			transition:.5s transform;
+			transform-origin:1.4em -.4em;
+		}
+
+
+		@keyframes blink-smooth{
+			50% {
+				color:transparent;
+			}
+		}
+		.highlight{
+			animation:1s blink-smooth 8;
+		}
+	</style>
+</head>
+<body>
+<label>
+	Your UserName:<input type="text" name="username" id="username" autocomplete="off">
+	<span class="callout">
+		Only letters,numbers, underscores(_) and hyphens(-) allowed!
+	</span>
+</label>
+<span class="highlight">aaa</span>
+
+<script>
+
+var str = "Hello world!";
+document.write(str.blink());
+
+</script>
+</body>
+</html>

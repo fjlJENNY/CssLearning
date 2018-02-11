@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>线条向右延伸</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        .cspaceintro .intro-container .line2{
+            position: relative;
+            left: 890px;
+            bottom:25px;
+            width: 2%;
+            height: 30px;
+            background-color: #3ebbff;
+
+            background:-webkit-gradient(linear,0 0 ,0 100%，from(#7BC3FF), to(#7BC3FF));
+
+            -webkit-animation:aaa 2s linear 1;
+            -webkit-animation-fill-mode:both;
+
+
+        }
+
+        @keyframes aaa{
+        0%  {width:0%; }
+        30% {width:2%; }
+        60% {width:4%; }
+        100%{width:5%; }
+        }
+        
+
+
+
+        /*.itemHeader{
+            display: flex;
+            align-items:baseline;
+        }
+        .itemHeader div:first-child{
+            margin-right: 2em;
+           
+        }
+        .itemHeader div:last-child{
+            border-bottom:1px solid #000;
+            
+            //width: 100%;
+            flex: 1;
+        }*/
+
+
+        .itemHeader {
+            position: relative;
+          }
+
+          .itemHeader div {
+            display: inline-block;
+            padding-right: 2em;
+            background: #fff;
+          }
+
+          .itemHeader div::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            height: 1px;
+            width: 100%;
+            border-bottom: 1px solid #000;
+            z-index: -1;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="cspaceintro">
+        <div class="intro-container">
+            <div class="line2" ></div>
+        </div>
+    </div>
+
+    <div class="itemHeader"><div>建筑图纸</div><div></div></div>
+</body>
+
+</html>
